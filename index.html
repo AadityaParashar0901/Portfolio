@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #fff;
+    }
+
+    header {
+      background: #1c1c1c;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #00ffcc;
+    }
+
+    nav a, #contact a {
+      margin-left: 2rem;
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover, #contact a {
+      color: #00ffcc;
+    }
+
+    section {
+      padding: 100px 20px;
+      min-height: 100vh;
+    }
+
+    #home {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #home h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    #home p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      color: #aaa;
+    }
+
+    .button {
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      background: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: transform 0.2s;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+    }
+
+    #projects, #contact {
+      background: #1a1a1a;
+    }
+
+    #projects p {
+      margin-bottom: 10px;
+    }
+    .project {
+      margin: 2rem 0;
+      padding: 1rem;
+      background: #2a2a2a;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .language_highlight, #projects span, #home span {
+      display: inline-block;
+      padding: 2px 10px;
+      border: 1px solid #6a737d;
+      border-radius: 10px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    footer {
+      background: #111;
+      padding: 1rem;
+      text-align: center;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MyPortfolio</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="https://github.com/AadityaParashar0901">Github</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Hello, I'm Aaditya Parashar</h2>
+    <p>A passionate programmer who codes for fun..</p>
+    <p>My skill set: <span>Flutter</span><span>HTML</span><span>QB64</span><span>Assembly</span></p>
+    <button class="button" onclick="scrollToSection('projects')">View Projects</button>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project" onClick="window.location.href='https://github.com/AadityaParashar0901/QB-Blocks'">
+      <h3>QB-Blocks</h3>
+      <p>A Minecraft Clone.</p>
+      <span class="language_highlight">QB64</span>
+    </div>
+    <div class="project" onClick="window.location.href='https://github.com/AadityaParashar0901/aios'">
+      <h3>AIOS</h3>
+      <p>A simple operating system, featuring a simple Command Line Interface, and a way to create apps.</p>
+      <span class="language_highlight">Assembly</span>
+    </div>
+    <div class="project" onClick="window.location.href='https://github.com/AadityaParashar0901/Breakout'">
+      <h3>Breakout</h3>
+      <p>A Google Breakout game clone, with sound effects and powerups.</p>
+      <span class="language_highlight">QB64</span>
+    </div>
+    <div class="project" onClick="window.location.href='https://github.com/AadityaParashar0901/noise'">
+      <h3>Noise Library</h3>
+      <p>A simplex noise algorithm made for QB64.</p>
+      <span class="language_highlight">QB64</span>
+    </div>
+    <div class="project" onClick="window.location.href='https://github.com/AadityaParashar0901/QIMG'">
+      <h3>QIMG</h3>
+      <p>A sprite managing library made for QB64, capable of handling animations, rotating sprites.</p>
+      <span class="language_highlight">QB64</span>
+    </div>
+    <div class="project" onClick="window.location.href='https://github.com/AadityaParashar0901/TEdi'">
+      <h3>TEdi</h3>
+      <p>A Text Editor, featuring a scroll bar similar to VS Code and a lot of keybinds.</p>
+      <span class="language_highlight">QB64</span>
+    </div>
+    <div class="project" onClick="window.location.href='https://github.com/AadityaParashar0901/vm'">
+      <h3>VM</h3>
+      <p>A simple compiled language, similar to the assembly language.</p>
+      <span class="language_highlight">QB64</span>
+    </div>
+    <div class="project" onClick="window.location.href='https://github.com/AadityaParashar0901/bootanimation_viewer'">
+      <h3>Android Bootanimation Viewer</h3>
+      <p>A utility for viewing bootanimations.</p>
+      <span class="language_highlight">QB64<span>
+    </div>
+    <div class="project" onClick="window.location.href='https://github.com/AadityaParashar0901/Archive'">
+      <h3>Archive</h3>
+      <p>A file archiving utility.</p>
+      <span class="language_highlight">QB64</span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="aaditya.p0901@gmail.com" style="color:#00ffcc">aaditya.p0901@gmail.com</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/aaditya_parashar_0901/" style="color:#00ffcc">aaditya_parashar_0901</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/aaditya-parashar-18995a341/" style="color:#00ffcc">Aaditya Parashar</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Aaditya Parashar. All rights reserved.
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
