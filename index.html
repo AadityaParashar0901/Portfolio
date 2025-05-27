@@ -93,8 +93,11 @@
       margin-bottom: 10px;
     }
     .project {
-      margin: 2rem 0;
-      padding: 1rem;
+      float: left;
+      width: 49%;
+      margin-left: 10px;
+      margin-bottom: 20px;
+      padding: 1%;
       background: #2a2a2a;
       border-radius: 8px;
       transition: transform 0.3s, box-shadow 0.3s;
@@ -121,6 +124,7 @@
       text-align: center;
       color: #666;
     }
+
   </style>
 </head>
 <body>
@@ -137,53 +141,53 @@
   <section id="home">
     <h2>Hello, I'm Aaditya Parashar</h2>
     <p>A passionate programmer who codes for fun.</p>
-    <p>My skill set: <span>Flutter</span><span>HTML</span><span>QB64</span><span>Assembly</span></p>
+    <p>My skill set: <span>Flutter</span><span>HTML</span><span>QB64</span><span>Assembly</span><span>C</span><span>C++</span></p>
     <button class="button" onclick="scrollToSection('projects')">View Projects</button>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <div class="project" onClick="window.location.href='https://github.com/AadityaParashar0901/QB-Blocks'">
+    <div class="project" onClick="openGithubURL('QB-Blocks')">
       <h3>QB-Blocks</h3>
       <p>A Minecraft Clone.</p>
       <span class="language_highlight">QB64</span>
     </div>
-    <div class="project" onClick="window.location.href='https://github.com/AadityaParashar0901/aios'">
+    <div class="project" onClick="openGithubURL('aios')">
       <h3>AIOS</h3>
       <p>A simple operating system, featuring a simple Command Line Interface, and a way to create apps.</p>
       <span class="language_highlight">Assembly</span>
     </div>
-    <div class="project" onClick="window.location.href='https://github.com/AadityaParashar0901/Breakout'">
+    <div class="project" onClick="openGithubURL('Breakout')">
       <h3>Breakout</h3>
       <p>A Google Breakout game clone, with sound effects and powerups.</p>
       <span class="language_highlight">QB64</span>
     </div>
-    <div class="project" onClick="window.location.href='https://github.com/AadityaParashar0901/noise'">
+    <div class="project" onClick="openGithubURL('noise')">
       <h3>Noise Library</h3>
       <p>A simplex noise algorithm made for QB64.</p>
       <span class="language_highlight">QB64</span>
     </div>
-    <div class="project" onClick="window.location.href='https://github.com/AadityaParashar0901/QIMG'">
+    <div class="project" onClick="openGithubURL('QIMG')">
       <h3>QIMG</h3>
       <p>A sprite managing library made for QB64, capable of handling animations, rotations.</p>
       <span class="language_highlight">QB64</span>
     </div>
-    <div class="project" onClick="window.location.href='https://github.com/AadityaParashar0901/TEdi'">
+    <div class="project" onClick="openGithubURL('TEdi')">
       <h3>TEdi</h3>
       <p>A Text Editor, featuring a scroll bar similar to VS Code and some keybinds.</p>
       <span class="language_highlight">QB64</span>
     </div>
-    <div class="project" onClick="window.location.href='https://github.com/AadityaParashar0901/vm'">
+    <div class="project" onClick="openGithubURL('vm')">
       <h3>VM</h3>
       <p>A simple compiled language, similar to the assembly language.</p>
       <span class="language_highlight">QB64</span>
     </div>
-    <div class="project" onClick="window.location.href='https://github.com/AadityaParashar0901/bootanimation_viewer'">
+    <div class="project" onClick="openGithubURL('bootanimation_viewer')">
       <h3>Android Bootanimation Viewer</h3>
       <p>A utility for viewing bootanimations.</p>
       <span class="language_highlight">QB64</span>
     </div>
-    <div class="project" onClick="window.location.href='https://github.com/AadityaParashar0901/Archive'">
+    <div class="project" onClick="openGithubURL('Archive')">
       <h3>Archive</h3>
       <p>A file archiving utility.</p>
       <span class="language_highlight">QB64</span>
@@ -192,7 +196,7 @@
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: <a href="aaditya.p0901@gmail.com" style="color:#00ffcc">aaditya.p0901@gmail.com</a></p>
+    <p>Email: <a style="color:#00ffcc">aaditya.p0901@gmail.com</a></p>
     <p>Instagram: <a href="https://www.instagram.com/aaditya_parashar_0901/" style="color:#00ffcc">aaditya_parashar_0901</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/aaditya-parashar-18995a341/" style="color:#00ffcc">Aaditya Parashar</a></p>
   </section>
@@ -204,6 +208,9 @@
   <script>
     function scrollToSection(id) {
       document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+    function openGithubURL(url) {
+      window.location.href="https://github.com/AadityaParashar0901/".concat(url);
     }
   </script>
 </body>
